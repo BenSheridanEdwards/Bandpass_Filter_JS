@@ -1,0 +1,11 @@
+{
+  "name": "Bandpass_Filter_JS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BenSheridanEdwards/Bandpass_Filter_JS.git",
+  "author": "bensheridanedwards <bensheridanedwards@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}
