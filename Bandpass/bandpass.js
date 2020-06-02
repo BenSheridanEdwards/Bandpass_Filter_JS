@@ -1,11 +1,10 @@
-const Bandpass = (soundwave) => {
-  
-  const filter = (soundwave) => {
-    return soundwave
+var bandpass = (soundwave) => {
+
+  const filter = soundwave => {
+    return soundwave;
   }
 
   return filter(soundwave)
-};
+}
 
-
-module.exports = Bandpass;
+module.exports = bandpass
