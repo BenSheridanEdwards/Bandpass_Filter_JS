@@ -50,8 +50,8 @@ Output = [80, 40, 90, 70, 80]
 
 ## Code
 
-![JavaScript Code]()
+![JavaScript Code](https://github.com/BenSheridanEdwards/Bandpass_Filter_JS/blob/master/images/BandpassFilter-JavaScriptCode.png)
 
 ## Tests
 
-![Jest Tests]()
+![Jest Tests](https://github.com/BenSheridanEdwards/Bandpass_Filter_JS/blob/master/images/BandpassFilter-JestTests.png)
