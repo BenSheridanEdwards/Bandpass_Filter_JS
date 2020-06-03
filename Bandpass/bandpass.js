@@ -1,17 +1,21 @@
-var bandpass = (soundwave, upperBoundary, lowerBoundary) => {
-  var upperBoundary = upperBoundary;
-  var lowerBoundary = lowerBoundary;
+const bandpass = (soundwave, upperBoundary, lowerBoundary) => {
+  // const upperBoundary = upperBoundary;
+  // const lowerBoundary = lowerBoundary;
 
-  const filter = soundwave => {
+  const filter = () => {
     soundwave.forEach((frequency, index) => {
-      if (typeof frequency === "string") { throw "ArgumentError: soundwave can not contain strings" }
-      frequency > upperBoundary ? soundwave[index] = upperBoundary : null
-      frequency < lowerBoundary ? soundwave[index] = lowerBoundary : null
-    })
-    return soundwave
-  }
+      if (typeof frequency === 'string') {
+        throw new Error('ArgumentError: soundwave can not contain strings');
+      } else if (frequency > upperBoundary) {
+        soundwave[index] = upperBoundary;
+      } else if (frequency < lowerBoundary) {
+        soundwave[index] = lowerBoundary;
+      }
+    });
+    return soundwave;
+  };
 
-  return filter(soundwave)
-}
+  return filter(soundwave);
+};
 
-module.exports = bandpass
+module.exports = bandpass;
