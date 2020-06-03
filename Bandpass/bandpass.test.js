@@ -68,16 +68,23 @@ describe('bandpass', () => {
   });
 
   describe('when a soundwave contains a invalid data type', () => {
-    it('throws an error when the soundwave contains a string', () => {
-      const message = 'ArgumentError: soundwave can not contain strings';
+    it('throws an arguement error when the soundwave contains a string', () => {
+      const message = 'ArgumentError: Soundwave can not contain strings';
       expect(() => {
         bandpass([40, 60, '', 60, 40], 80, 20);
       }).toThrowError(message);
     });
-    it('throws an error when a freqency is a negative value', () => {
-      const message = 'ArgumentError: frequencies must be positive values';
+    it('throws an arguement error when a freqency is a negative value', () => {
+      const message = 'ArgumentError: Frequencies must be positive values';
       expect(() => {
         bandpass([40, 60, -40, 60, 40], 80, 20);
+      }).toThrowError(message);
+    });
+    it('throws an arguement error when the soundwave contains less than 5 frequencies', () => {
+      const message =
+        'ArgumentError: Soundwaves must contain at least 5 frequencies';
+      expect(() => {
+        bandpass([40, 60, 60, 40], 80, 20);
       }).toThrowError(message);
     });
   });
