@@ -1,6 +1,4 @@
 const bandpass = (soundwave, upperBoundary, lowerBoundary) => {
-  // const upperBoundary = upperBoundary;
-  // const lowerBoundary = lowerBoundary;
 
   const filter = () => {
     soundwave.forEach((frequency, index) => {
