@@ -74,5 +74,11 @@ describe('bandpass', () => {
         bandpass([40, 60, '', 60, 40], 80, 20);
       }).toThrowError(message);
     });
+    it('throws an error when a freqency is a negative value', () => {
+      const message = 'ArgumentError: frequencies must be positive values';
+      expect(() => {
+        bandpass([40, 60, -40, 60, 40], 80, 20);
+      }).toThrowError(message);
+    });
   });
 });
