@@ -19,7 +19,7 @@ const bandpass = (soundwave, upperBoundary, lowerBoundary) => {
     return soundwave;
   };
 
-  return filter(soundwave);
+  return filter();
 };
 
 module.exports = bandpass;
